@@ -40,11 +40,7 @@ public static class AutomateFunction
 
         // Create the file.
         using (FileStream fs = File.Create(path))
-          {
-            AddText(fs, "This is some text");
-            AddText(fs, "This is some more text,");
-            AddText(fs, "\r\nand this is on a new line");
-          }
+        
         try
         {
             // Create the file, or overwrite if it already exists
