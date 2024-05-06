@@ -31,16 +31,6 @@ public static class AutomateFunction
     Console.WriteLine($"Counted {count} objects");
     Console.WriteLine("Random text");
     string path = @"c:\temp\MyTest.txt";
-
-        // Delete the file if it exists.
-        if (File.Exists(path))
-        {
-            File.Delete(path);
-        }
-
-        // Create the file.
-        using (FileStream ffs = File.Create(path))
-        
         try
         {
             // Create the file, or overwrite if it already exists
