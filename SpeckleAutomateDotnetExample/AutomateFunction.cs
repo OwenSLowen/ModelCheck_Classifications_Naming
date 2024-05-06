@@ -25,5 +25,31 @@ public static class AutomateFunction
 
     Console.WriteLine($"Counted {count} objects");
     automationContext.MarkRunSuccess($"Counted {count} objects");
+    string path = @"C:\temp\MyTest.txt"; // Specify the path where you want to create the file
+
+        try
+        {
+            // Create the file, or overwrite if it already exists
+            using (FileStream fs = File.Create(path))
+            {
+                byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
+                fs.Write(info, 0, info.Length);
+            }
+
+            // Open the stream and read from the file (optional)
+            using (StreamReader sr = File.OpenText(path))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    
   }
 }
