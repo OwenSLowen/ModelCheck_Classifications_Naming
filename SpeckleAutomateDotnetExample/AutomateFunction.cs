@@ -30,14 +30,27 @@ public static class AutomateFunction
 
     Console.WriteLine($"Counted {count} objects");
     Console.WriteLine("Random text");
-        string path = @"C:\temp\MyTest.txt"; // Specify the path where you want to create the file
+    string path = @"c:\temp\MyTest.txt";
 
+        // Delete the file if it exists.
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+
+        // Create the file.
+        using (FileStream fs = File.Create(path))
+          {
+            AddText(fs, "This is some text");
+            AddText(fs, "This is some more text,");
+            AddText(fs, "\r\nand this is on a new line");
+          }
         try
         {
             // Create the file, or overwrite if it already exists
             using (FileStream fs = File.Create(path))
             {
-                byte[] info = new byte [54321];
+                byte[] info = new UTF8Encoding(true).GetBytes(value);
                 fs.Write(info, 0, info.Length);
                 Console.WriteLine($"Fiction {info} objects");
             }
