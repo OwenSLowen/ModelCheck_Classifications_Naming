@@ -39,14 +39,14 @@ public static class AutomateFunction
         }
 
         // Create the file.
-        using (FileStream fs = File.Create(path))
+        using (FileStream ffs = File.Create(path))
         
         try
         {
             // Create the file, or overwrite if it already exists
             using (FileStream fs = File.Create(path))
             {
-                byte[] info = new UTF8Encoding(true).GetBytes(value);
+                byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
                 fs.Write(info, 0, info.Length);
                 Console.WriteLine($"Fiction {info} objects");
             }
