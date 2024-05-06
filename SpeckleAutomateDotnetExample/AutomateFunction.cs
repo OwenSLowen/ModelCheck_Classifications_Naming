@@ -34,6 +34,7 @@ public static class AutomateFunction
             {
                 byte[] info = new byte [54321];
                 fs.Write(info, 0, info.Length);
+                Console.WriteLine($"Fiction {byte} objects");
             }
 
             // Open the stream and read from the file (optional)
