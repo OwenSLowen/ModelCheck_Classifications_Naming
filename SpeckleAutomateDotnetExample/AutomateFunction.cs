@@ -3,6 +3,9 @@ using Objects.Geometry;
 using Speckle.Automate.Sdk;
 using Speckle.Core.Logging;
 using Speckle.Core.Models.Extensions;
+using System;
+using System.IO;
+using System.Text;
 
 public static class AutomateFunction
 {
