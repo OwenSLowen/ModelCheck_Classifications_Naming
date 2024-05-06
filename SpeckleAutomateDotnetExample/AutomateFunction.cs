@@ -7,7 +7,6 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.IO;
 
 public static class AutomateFunction
@@ -35,6 +34,7 @@ public static class AutomateFunction
 
         try
         {
+             Console.WriteLine($"Random text");
             // Create the file, or overwrite if it already exists
             using (FileStream fs = File.Create(path))
             {
