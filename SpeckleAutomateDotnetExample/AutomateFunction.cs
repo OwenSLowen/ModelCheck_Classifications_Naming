@@ -32,7 +32,7 @@ public static class AutomateFunction
             // Create the file, or overwrite if it already exists
             using (FileStream fs = File.Create(path))
             {
-                byte[] info = new byte ("This is some text in the file.");
+                byte[] info = new byte ["This is some text in the file."];
                 fs.Write(info, 0, info.Length);
             }
 
