@@ -29,7 +29,7 @@ public static class AutomateFunction
       .Count(b => b.speckle_type == functionInputs.SpeckleTypeToCount);
 
     Console.WriteLine($"Counted {count} objects");
-    Console.WriteLine($"Random text");
+    Console.WriteLine("Random text");
         string path = @"C:\temp\MyTest.txt"; // Specify the path where you want to create the file
 
         try
