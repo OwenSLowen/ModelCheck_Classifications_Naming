@@ -31,8 +31,7 @@ public static class AutomateFunction
     Console.WriteLine($"Counted {count} objects");
     Console.WriteLine("Random text");
     string path = @"c:\temp\MyTest.txt";
-        try
-        {
+       
             // Create the file, or overwrite if it already exists
             using (FileStream fs = File.Create(path))
             {
@@ -50,11 +49,8 @@ public static class AutomateFunction
                     Console.WriteLine(s);
                 }
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-        }
+       
+      
     automationContext.MarkRunSuccess($"Counted {count} objects");
 
     
