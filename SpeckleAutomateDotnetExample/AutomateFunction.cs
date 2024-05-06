@@ -24,8 +24,8 @@ public static class AutomateFunction
       .Count(b => b.speckle_type == functionInputs.SpeckleTypeToCount);
 
     Console.WriteLine($"Counted {count} objects");
-    automationContext.MarkRunSuccess($"Counted {count} objects");
-    string path = @"C:\temp\MyTest.txt"; // Specify the path where you want to create the file
+
+        string path = @"C:\temp\MyTest.txt"; // Specify the path where you want to create the file
 
         try
         {
@@ -50,6 +50,8 @@ public static class AutomateFunction
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
+    automationContext.MarkRunSuccess($"Counted {count} objects");
+
     
   }
 }
