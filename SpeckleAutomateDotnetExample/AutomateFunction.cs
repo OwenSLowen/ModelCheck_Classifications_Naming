@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
+using Aspose.Cells;
 
 public static class AutomateFunction
 {
@@ -39,9 +40,20 @@ public static class AutomateFunction
                 fs.Write(info, 0, info.Length);
                 Console.WriteLine(path);
             }
+        
+            // Instantiate a Workbook object.
+        Workbook workbook = new Workbook();
 
-            // Open the stream and read from the file (optional)
-            using (StreamReader sr = File.OpenText(path))
+        // Add a new worksheet to the Excel object.
+        Worksheet worksheet = workbook.Worksheets.Add("MySheet");
+
+        // Input your report data into the cells of the worksheet (e.g., worksheet.Cells["A1"].PutValue("Hello, World!")).
+
+        // Save the Excel file.
+        string filePathWithData = @"C:\temp\MyExcelFileWithData.xlsx";
+        workbook.Save(filePathWithData);
+        // Open the stream and read from the file (optional)
+        using (StreamReader sr = File.OpenText(path))
             {
                 string s = "";
                 while ((s = sr.ReadLine()) != null)
