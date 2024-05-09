@@ -32,7 +32,7 @@ public static class AutomateFunction
     Console.WriteLine("Random text");
     string path = @"c:\temp\MyTest.txt";
     string pathtest = @"c:\Documents\MyTest.txt";
-    FileStream fstemp = File.Create(path);
+    // FileStream fstemp = File.Create(path);
     FileStream fstemptest = File.Create(pathtest);
        
             // Create the file, or overwrite if it already exists
