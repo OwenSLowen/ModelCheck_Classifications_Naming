@@ -31,7 +31,7 @@ public static class AutomateFunction
 
     Console.WriteLine($"Counted {count} objects");
     Console.WriteLine("Random text");
-    string path = "c:\temp\MyTest.txt";
+    string path = "c:\temp\\MyTest.txt";
 
             // Create the file, or overwrite if it already exists
            // using (FileStream fs = File.Create(path))
