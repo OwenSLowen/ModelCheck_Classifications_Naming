@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
-using Aspose.Cells;
+//using Aspose.Cells;
 
 public static class AutomateFunction
 {
@@ -34,24 +34,24 @@ public static class AutomateFunction
     string path = @"c:\temp\MyTest.txt";
 
             // Create the file, or overwrite if it already exists
-            using (FileStream fs = File.Create(path))
-            {
-                byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
-                fs.Write(info, 0, info.Length);
-                Console.WriteLine(path);
-            }
+           // using (FileStream fs = File.Create(path))
+           // {
+           //     byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
+           //     fs.Write(info, 0, info.Length);
+           //     Console.WriteLine(path);
+           // }
         
             // Instantiate a Workbook object.
-        Workbook workbook = new Workbook();
+        //Workbook workbook = new Workbook();
 
         // Add a new worksheet to the Excel object.
-        Worksheet worksheet = workbook.Worksheets.Add("MySheet");
+        //Worksheet worksheet = workbook.Worksheets.Add("MySheet");
 
         // Input your report data into the cells of the worksheet (e.g., worksheet.Cells["A1"].PutValue("Hello, World!")).
 
         // Save the Excel file.
-        string filePathWithData = @"C:\temp\MyExcelFileWithData.xlsx";
-        workbook.Save(filePathWithData);
+       // string filePathWithData = @"C:\temp\MyExcelFileWithData.xlsx";
+        //workbook.Save(filePathWithData);
         // Open the stream and read from the file (optional)
         using (StreamReader sr = File.OpenText(path))
             {
