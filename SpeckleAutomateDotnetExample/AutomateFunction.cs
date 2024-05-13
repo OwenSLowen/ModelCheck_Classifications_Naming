@@ -31,17 +31,17 @@ public static class AutomateFunction
 
     Console.WriteLine($"Counted {count} objects");
     
-    string path = "c:\temp\\MyTest.txt";
+    string path = "c:\\temp\\MyTest.txt";
     string basePath = AppDomain.CurrentDomain.BaseDirectory;
     Console.WriteLine(basePath);
 
         // Create the file, or overwrite if it already exists
-        // using (FileStream fs = File.Create(path))
-        // {
-        //     byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
-        //     fs.Write(info, 0, info.Length);
-        //     Console.WriteLine(path);
-        // }
+         using (FileStream fs = File.Create("c:\\temp\\MyTest.txt"))
+         {
+             byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
+             fs.Write(info, 0, info.Length);
+             Console.WriteLine(path);
+         }
 
         // Instantiate a Workbook object.
         //Workbook workbook = new Workbook();
