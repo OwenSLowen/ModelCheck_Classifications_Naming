@@ -30,18 +30,20 @@ public static class AutomateFunction
       .Count(b => b.speckle_type == functionInputs.SpeckleTypeToCount);
 
     Console.WriteLine($"Counted {count} objects");
-    Console.WriteLine("Random text");
-    string path = "c:\temp\MyTest.txt";
+    
+    string path = "c:\temp\\MyTest.txt";
+    string basePath = AppDomain.CurrentDomain.BaseDirectory;
+    Console.WriteLine(basePath);
 
-            // Create the file, or overwrite if it already exists
-           // using (FileStream fs = File.Create(path))
-           // {
-           //     byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
-           //     fs.Write(info, 0, info.Length);
-           //     Console.WriteLine(path);
-           // }
-        
-            // Instantiate a Workbook object.
+        // Create the file, or overwrite if it already exists
+        // using (FileStream fs = File.Create(path))
+        // {
+        //     byte[] info = new UTF8Encoding(true).GetBytes("textystuff");
+        //     fs.Write(info, 0, info.Length);
+        //     Console.WriteLine(path);
+        // }
+
+        // Instantiate a Workbook object.
         //Workbook workbook = new Workbook();
 
         // Add a new worksheet to the Excel object.
@@ -50,7 +52,7 @@ public static class AutomateFunction
         // Input your report data into the cells of the worksheet (e.g., worksheet.Cells["A1"].PutValue("Hello, World!")).
 
         // Save the Excel file.
-       // string filePathWithData = @"C:\temp\MyExcelFileWithData.xlsx";
+        // string filePathWithData = @"C:\temp\MyExcelFileWithData.xlsx";
         //workbook.Save(filePathWithData);
         // Open the stream and read from the file (optional)
         using (StreamReader sr = File.OpenText(path))
