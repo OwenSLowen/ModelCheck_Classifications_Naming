@@ -31,12 +31,14 @@ public static class AutomateFunction
       .Count(b => b.speckle_type == functionInputs.SpeckleTypeToCount);
 
     Console.WriteLine($"Counted {count} objects");
+    Console.WriteLine("GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
 
         string target = "https://www.microsoft.com";
+        System.Diagnostics.Process.Start(target);
 
         // Instantiate a Workbook object.
         Workbook workbook = new Workbook();
-        System.Diagnostics.Process.Start(target);
+       
        
 
         // Add a new worksheet to the Excel object.
